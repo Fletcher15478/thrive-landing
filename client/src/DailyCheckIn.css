@@ -1,0 +1,52 @@
+.checkin-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.checkin-modal {
+  background: #1f293a;
+  border: 2px solid #0ef;
+  padding: 2rem;
+  border-radius: 1rem;
+  color: white;
+  width: 400px;
+  box-shadow: 0 0 20px #0ef;
+}
+
+.checkin-modal h2 {
+  text-align: center;
+  color: #0ef;
+  margin-bottom: 1rem;
+}
+
+.checkin-modal textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 1px solid #2c4766;
+  background: #1e293b;
+  color: #fff;
+  resize: none;
+  height: 60px;
+}
+
+.checkin-modal .btn {
+  width: 100%;
+  background: #0ef;
+  color: #1f293a;
+  padding: 0.75rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.checkin-modal .btn:hover {
+  background: #0dcfd8;
+}

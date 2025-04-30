@@ -1,0 +1,165 @@
+.macro-tracker-page {
+    display: flex;
+    background: #1f293a;
+    min-height: 100vh;
+    color: #fff;
+  }
+  
+  /* Sidebar is already styled globally */
+  
+  /* Page Layout */
+  .macro-tracker-content {
+    margin-left: 14rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem;
+    gap: 3rem;
+  }
+  
+  /* Left Content */
+  .macro-tracker {
+    flex: 2;
+    max-width: 700px;
+  }
+  
+  .macro-tracker h2 {
+    text-align: left;
+    color: #0ef;
+    margin-bottom: 1.5rem;
+  }
+  
+  .macro-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .macro-tabs button {
+    background: transparent;
+    border: 1px solid #0ef;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  .macro-tabs .active {
+    background: #0ef;
+    color: #1f293a;
+  }
+  
+  /* Search */
+  .macro-search {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+  
+  .macro-search input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 10px;
+    border: 1px solid #0ef;
+    background: #1f293a;
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  .search-results {
+    list-style: none;
+    margin-top: 0.5rem;
+    background: #1f293a;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+  }
+  
+  .search-results li {
+    padding: 0.75rem;
+    border-bottom: 1px solid #2c4766;
+    cursor: pointer;
+  }
+  
+  .search-results li:hover {
+    background: #0ef;
+    color: #1f293a;
+  }
+  
+  /* Food & Water Log */
+  .macro-log {
+    margin-top: 2rem;
+  }
+  
+  .macro-log ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+  }
+  
+  /* Macro Totals */
+  .macro-summary {
+    margin-top: 2rem;
+    text-align: left;
+  }
+  
+  /* Water */
+  .water-cup {
+    width: 100px;
+    height: 200px;
+    border: 2px solid #0ef;
+    border-radius: 5px;
+    position: relative;
+    margin: 1rem 0;
+    overflow: hidden;
+  }
+  
+  .cup-fill {
+    background: #0ef;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    transition: height 0.3s ease;
+  }
+  
+  .water-btn {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  
+  /* Right Ring Chart Panel */
+  .ring-panel {
+    flex: 1;
+    background: #1f293a;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+  }
+  
+  .ring-panel h3 {
+    color: #0ef;
+    margin-bottom: 1rem;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .macro-tracker-content {
+      flex-direction: column;
+      margin-left: 0;
+    }
+  
+    .ring-panel {
+      margin-top: 2rem;
+    }
+  }
+
+  .recharts-text {
+    fill: #fff;
+    font-weight: 600;
+  }
+  
+  .recharts-tooltip-wrapper {
+    font-family: 'Poppins', sans-serif;
+  }
+  
