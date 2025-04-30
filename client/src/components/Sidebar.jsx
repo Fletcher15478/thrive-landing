@@ -29,7 +29,7 @@ const Sidebar = () => {
           <li onClick={() => navigate('/profile')}>👤 Profile</li>
           <li onClick={() => navigate('/workouts')}>🏋️ Workouts</li>
           <li onClick={() => navigate('/macrotracker')}>🍽️ Calorie Tracker</li>
-          <li onClick={() => navigate('/about')}>ℹ️ About</li>
+          
           <li onClick={handleLogout}>🚪 Logout</li>
         </ul>
       </div>
