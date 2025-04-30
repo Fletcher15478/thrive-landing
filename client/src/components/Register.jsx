@@ -94,7 +94,7 @@ function Register() {
           </div>
           <button type="submit" className="btn">Register</button>
           <div className="signup-link">
-            <a href="/">Back to Login</a>
+            <a href="/login">Back to Login</a>
           </div>
           {error && <p style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
           {success && <p style={{ color: 'lime', textAlign: 'center' }}>{success}</p>}

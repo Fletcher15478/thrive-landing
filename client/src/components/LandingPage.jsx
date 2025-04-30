@@ -6,25 +6,24 @@ function LandingPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="landing">
+    <div className="landing-container">
       <header className="landing-header">
-        <h2 className="logo">Royal <span>Fitness</span></h2>
-        <button className="nav-btn" onClick={() => navigate('/register')}>Join Us</button>
+        <h1 className="landing-logo">Thrive</h1>
       </header>
 
-      <section className="hero">
-        <div className="hero-content">
-          <h3>Build Your</h3>
-          <h1>Dream Physique</h1>
-          <h3><span className="highlight">Fat Loss</span></h3>
-          <p>Lorem ipsum dolor sit, bus earum, aliquam ipsa repellat iusto esse laudantium animi vitae consectetur obcaecati.</p>
-          <button className="btn" onClick={() => navigate('/register')}>Join Us</button>
+      <main className="landing-hero">
+        <div className="landing-text">
+          <h2>Your AI Fitness Companion</h2>
+          <p>
+            Thrive is your personal fitness partner — powered by AI. From personalized workouts to macro tracking and daily check-ins,
+            Thrive adapts to your goals and grows with your progress. Stay accountable, optimize performance, and take your health to the next level.
+          </p>
+          <button className="btn btn-pink" onClick={() => navigate('/register')}>Start Now</button>
         </div>
-        <div className="hero-img">
-          <div className="bg-text">FITNESS</div>
-          <img src="/hero.png" alt="Hero" />
+        <div className="landing-image">
+          <img src="images/hero.png" alt="Thrive App Preview" />
         </div>
-      </section>
+      </main>
     </div>
   );
 }
