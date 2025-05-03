@@ -1,27 +1,53 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../LandingPage.css';
 
 function LandingPage() {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    // Add smooth scroll behavior
+    document.documentElement.style.scrollBehavior = 'smooth';
+  }, []);
+
   return (
     <div className="landing-container">
+      <div className="particles"></div>
       <header className="landing-header">
         <h1 className="landing-logo">Thrive</h1>
+        <nav className="landing-nav">
+          <button className="btn btn-outline" onClick={() => navigate('/login')}>Login</button>
+        </nav>
       </header>
 
       <main className="landing-hero">
         <div className="landing-text">
-          <h2>Your AI Fitness Companion</h2>
+          <span className="hero-subtitle">AI-Powered Fitness</span>
+          <h2>Transform Your Fitness Journey</h2>
           <p>
-            Thrive is your personal fitness partner — powered by AI. From personalized workouts to macro tracking and daily check-ins,
-            Thrive adapts to your goals and grows with your progress. Stay accountable, optimize performance, and take your health to the next level.
+            Experience the future of fitness with Thrive — your intelligent workout companion. 
+            Get personalized training plans, real-time progress tracking, and AI-driven insights 
+            that adapt to your goals and performance.
           </p>
-          <button className="btn btn-pink" onClick={() => navigate('/register')}>Start Now</button>
+          <div className="cta-buttons">
+            <button className="btn btn-primary" onClick={() => navigate('/register')}>
+              Start Free Trial
+            </button>
+            <button className="btn btn-secondary" onClick={() => navigate('/demo')}>
+              Watch Demo
+            </button>
+          </div>
         </div>
         <div className="landing-image">
-          <img src="images/hero.png" alt="Thrive App Preview" />
+          <div className="image-container">
+            <img src="images/hero.png" alt="Thrive App Preview" />
+            <div className="floating-card card-1">
+              <span>AI Workouts</span>
+            </div>
+            <div className="floating-card card-2">
+              <span>Progress Tracking</span>
+            </div>
+          </div>
         </div>
       </main>
     </div>
