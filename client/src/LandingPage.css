@@ -10,16 +10,20 @@
   --header-height: 80px;
 }
 
+
 .landing-container {
   background: #0f172a;
   color: var(--text);
   min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: 'Inter', sans-serif;
   width: 100%;
   overflow-x: hidden;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 /* Particles background */

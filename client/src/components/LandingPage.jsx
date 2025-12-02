@@ -8,6 +8,25 @@ function LandingPage() {
   useEffect(() => {
     // Add smooth scroll behavior
     document.documentElement.style.scrollBehavior = 'smooth';
+    
+    // Set body and html background to match landing page
+    const originalBodyBackground = document.body.style.background;
+    const originalHtmlBackground = document.documentElement.style.background;
+    const originalBodyMargin = document.body.style.margin;
+    const originalBodyPadding = document.body.style.padding;
+    
+    document.body.style.background = '#0f172a';
+    document.body.style.margin = '0';
+    document.body.style.padding = '0';
+    document.documentElement.style.background = '#0f172a';
+    
+    // Cleanup function to restore original styles when component unmounts
+    return () => {
+      document.body.style.background = originalBodyBackground || '';
+      document.body.style.margin = originalBodyMargin || '';
+      document.body.style.padding = originalBodyPadding || '';
+      document.documentElement.style.background = originalHtmlBackground || '';
+    };
   }, []);
 
   return (
