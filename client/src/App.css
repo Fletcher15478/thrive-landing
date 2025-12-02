@@ -14,8 +14,8 @@ body {
 }
 .container {
   position: relative;
-  width:380px; /* was 256px */
-  height: 380px; /* was 256px */
+  width: 420px; /* Increased to fit form better */
+  height: 420px; /* Increased to fit form better */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,7 +29,7 @@ body {
   height: 6px;
   background: #2c4766;
   border-radius: 8px;
-  transform-origin: 190px; /* was 128px */
+  transform-origin: 210px; /* Half of 420px to keep wheel centered */
   transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
   animation: animateBlink 3s linear infinite;
   animation-delay: calc(var(--i) * (3s / 50));
@@ -45,20 +45,22 @@ body {
 }
 .login-box {
     position: absolute;
-    width: 400px;
+    width: 380px; /* Reduced to fit inside 420px container */
+    z-index: 10; /* Ensure form is above spinning wheel */
 }
 .login-box form {
     width: 100%;
-    padding: 0 50px;
+    padding: 0 40px; /* Reduced padding to fit better */
 }
 h2 {
-    font-size: 2em;
+    font-size: 1.8em; /* Slightly reduced to fit better */
     color: #0ef;
     text-align: center;
+    margin-bottom: 10px; /* Add some spacing */
 }
 .input-box {
     position: relative;
-    margin: 25px 0;
+    margin: 20px 0; /* Reduced margin to fit more fields */
 }
 .input-box input {
     width: 100%;
@@ -108,7 +110,7 @@ h2 {
 }
 .btn {
   display: block;
-  margin: 20px auto; /* Center the button horizontally */
+  margin: 15px auto; /* Reduced margin to fit better */
   padding: 0.75rem 2rem; /* Add horizontal padding for longer text */
   background: #0ef;
   border: none;
@@ -124,7 +126,7 @@ h2 {
 
 
 .signup-link {
-    margin: 20px 0 10px;
+    margin: 15px 0 10px; /* Reduced margin to fit better */
     text-align: center;
 }
 .signup-link a {
